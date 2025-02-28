@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blogs</title>
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind + Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
 </head>
-<body>
-    
+
+<body class="bg-slate-400 px-10 py-5">
+    <!-- Header Section -->
+    <header class="bg-white px-5 py-5 rounded-lg">
+        <!-- Nav Area -->
+        <nav class="flex justify-between items-center bg-white">
+            <!-- Brand Area -->
+            <div class="flex gap-2 items-center ">
+                <img src="./assets/logo.png" alt="DevBoard">
+                <h2 class="text-5xl">Dev<span class="font-bold">Board</span></h2>
+            </div>
+            <a href="./index.html">
+                <button class="btn btn-primary">Back To Desk</button>
+            </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1 class="font-bold text-4xl text-black text-center p-10">Blogs</h1>
+    </main>
+
 </body>
+
 </html>
