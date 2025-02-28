@@ -1,35 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevBoard</title>
+    <!-- Tailwind + Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+
+<body class="bg-slate-600 px-20 py-10">
 
     <!-- Header Section -->
-     <header>
+    <header class="bg-white px-5 py-5 rounded-lg">
         <!-- Nav Area -->
-         <nav>
+        <nav class="flex justify-between items-center bg-white">
             <!-- Brand Area -->
-            <div class="logo">
+            <div class="flex gap-2 items-center ">
                 <img src="./assets/logo.png" alt="DevBoard">
-                <h2 class="logotext">Dev<span class="logo-text-style">Board</span></h2>
+                <h2 class="text-5xl">Dev<span class="font-bold">Board</span></h2>
             </div>
             <!-- Menu Area -->
-            <div class="menu">
-                <div class="task-counter">
-                    <img src="./assets/checkbox.png" alt="checkbox">
-                    <div class="counter">23</div>
+            <div class="flex gap-10 items-center ">
+                <div class="bg-slate-600 flex gap-4 px-5 py-3 rounded-full">
+                    <img src="./assets/checkbox.png" alt="checkbox" class="w-5 h-5">
+                    <div class="font-bold">23</div>
                 </div>
 
-                <div class="theme">
+                <div class="bg-slate-600 px-3 py-3 rounded-full">
                     <img src="./assets/theme-btn.png" alt="theme-btn">
                 </div>
             </div>
-         </nav>
-     </header>
+        </nav>
+    </header>
 
+    <main>
+        <!-- Main Task Area -->
+        <div class="w-9/12 bg-white">
+            <!-- Counter + Discover section -->
+            <section>
+
+            </section>
+
+        </div>
+        <!-- Activity Log Area -->
+        <div class="w-3/12 bg-white">
+
+
+        </div>
+    </main>
     
+
+
 </body>
+
 </html>
