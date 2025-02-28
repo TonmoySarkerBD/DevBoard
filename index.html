@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevBoard</title>
+
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
     <!-- Tailwind + Daisy UI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,9 +27,17 @@
             }
         }
     </script>
+
+    <!-- Custom CSS -->
+     <style>
+        *{
+            font-family: "Poppins", sans-serif;
+        }
+     </style>
+
 </head>
 
-<body class="bg-slate-600 px-20 py-10">
+<body class="bg-slate-200 theme-bg px-20 py-10">
 
     <!-- Header Section -->
     <header class="bg-white px-5 py-5 rounded-lg">
@@ -34,36 +50,151 @@
             </div>
             <!-- Menu Area -->
             <div class="flex gap-10 items-center ">
-                <div class="bg-slate-600 flex gap-4 px-5 py-3 rounded-full">
+                <div class="bg-slate-200 theme-bg flex gap-4 px-5 py-3 rounded-full">
                     <img src="./assets/checkbox.png" alt="checkbox" class="w-5 h-5">
                     <div class="font-bold">23</div>
                 </div>
 
-                <div class="bg-slate-600 px-3 py-3 rounded-full">
+                <div id="theme-button" class="bg-slate-200 theme-bg px-3 py-3 rounded-full">
                     <img src="./assets/theme-btn.png" alt="theme-btn">
                 </div>
             </div>
         </nav>
     </header>
 
-    <main>
+    <main class=" my-10 flex gap-5">
         <!-- Main Task Area -->
-        <div class="w-9/12 bg-white">
-            <!-- Counter + Discover section -->
-            <section>
 
-            </section>
+        <div class="bg-white w-9/12 rounded-lg ">
+
+
+            <!-- Counter + Discover section -->
+            <div class="flex border-b border-dashed border-gray-600">
+
+
+                <section class="w-3/12 m-5 p-2 rounded-lg bg-slate-200 theme-bg">
+                    <!-- Task Assigned Box -->
+                    <div class="flex items-center justify-center gap-2 py-10 ">
+                        <div class="bg-white p-2 rounded-full">
+                            <img src="./assets/checkbox.png" alt="checkbox">
+                        </div>
+                        <div>
+                            <h4>Task Assigned</h4>
+                            <p id="">6</p>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="w-6/12 my-5 p-2 rounded-lg bg-gradient-to-r from-[#3752fd] via-[#6c7ff9] to-[#9ba8f8]">
+                    <!-- Task Assigned Box -->
+                    <div class="flex items-center justify-center gap-2 py-10 ">
+                        <div class="">
+                            <img src="./assets/board.png" alt="checkbox">
+                        </div>
+                        <div>
+                            <h4 class="text-2xl text-white">Discover Something New Today!</h4>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="w-3/12 m-5 p-2 rounded-lg bg-slate-200 theme-bg">
+                    <!-- Task Assigned Box -->
+                    <div class="flex items-center justify-center gap-2 py-10 ">
+                        <div class="bg-white p-2 rounded-full">
+                            <img src="./assets/calender.png" alt="checkbox">
+                        </div>
+                        <div>
+                            <h4>Fiday Feb 28 <br>2025</h4>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+
+
+            <!-- Tasks Section -->
+             <div class="pl-3 pr-7 py-5 mx-2">
+
+                 <div class="grid grid-cols-3 gap-5 ">
+    
+                     <div class="w-full  m-2 p-4 rounded-lg bg-slate-200 theme-bg flex flex-col gap-5">
+                        <h4 class="bg-white p-3 mr-auto rounded-lg">Shop Ease</h4>
+                        <h2 class="font-bold text-2xl">Fix Mobile Button Issue</h2>
+                        <p class="bg-white p-2 rounded-lg">A card component has a figure, abodypart, and inside body there are title and actions parts ...</p>
+                        <div class="flex justify-between">
+                            <h4 class="">Deadline <br> <span>21 March 2025</span></h4>
+                            <button class="btn btn-primary">Completed</button>
+                        </div>
+                     </div>
+                     <div class="w-full  m-2 p-4 rounded-lg bg-slate-200 theme-bg flex flex-col gap-5">
+                        <h4 class="bg-white p-3 mr-auto rounded-lg">Shop Ease</h4>
+                        <h2 class="font-bold text-2xl">Fix Mobile Button Issue</h2>
+                        <p class="bg-white p-2 rounded-lg">A card component has a figure, abodypart, and inside body there are title and actions parts ...</p>
+                        <div class="flex justify-between">
+                            <h4 class="">Deadline <br> <span>21 March 2025</span></h4>
+                            <button class="btn btn-primary">Completed</button>
+                        </div>
+                     </div>
+                     <div class="w-full  m-2 p-4 rounded-lg bg-slate-200 theme-bg flex flex-col gap-5">
+                        <h4 class="bg-white p-3 mr-auto rounded-lg">Shop Ease</h4>
+                        <h2 class="font-bold text-2xl">Fix Mobile Button Issue</h2>
+                        <p class="bg-white p-2 rounded-lg">A card component has a figure, abodypart, and inside body there are title and actions parts ...</p>
+                        <div class="flex justify-between">
+                            <h4 class="">Deadline <br> <span>21 March 2025</span></h4>
+                            <button class="btn btn-primary">Completed</button>
+                        </div>
+                     </div>
+                     <div class="w-full  m-2 p-4 rounded-lg bg-slate-200 theme-bg flex flex-col gap-5">
+                        <h4 class="bg-white p-3 mr-auto rounded-lg">Shop Ease</h4>
+                        <h2 class="font-bold text-2xl">Fix Mobile Button Issue</h2>
+                        <p class="bg-white p-2 rounded-lg">A card component has a figure, abodypart, and inside body there are title and actions parts ...</p>
+                        <div class="flex justify-between">
+                            <h4 class="">Deadline <br> <span>21 March 2025</span></h4>
+                            <button class="btn btn-primary">Completed</button>
+                        </div>
+                     </div>
+                     <div class="w-full  m-2 p-4 rounded-lg bg-slate-200 theme-bg flex flex-col gap-5">
+                        <h4 class="bg-white p-3 mr-auto rounded-lg">Shop Ease</h4>
+                        <h2 class="font-bold text-2xl">Fix Mobile Button Issue</h2>
+                        <p class="bg-white p-2 rounded-lg">A card component has a figure, abodypart, and inside body there are title and actions parts ...</p>
+                        <div class="flex justify-between">
+                            <h4 class="">Deadline <br> <span>21 March 2025</span></h4>
+                            <button class="btn btn-primary">Completed</button>
+                        </div>
+                     </div>
+                     <div class="w-full  m-2 p-4 rounded-lg bg-slate-200 theme-bg flex flex-col gap-5">
+                        <h4 class="bg-white p-3 mr-auto rounded-lg">Shop Ease</h4>
+                        <h2 class="font-bold text-2xl">Fix Mobile Button Issue</h2>
+                        <p class="bg-white p-2 rounded-lg">A card component has a figure, abodypart, and inside body there are title and actions parts ...</p>
+                        <div class="flex justify-between">
+                            <h4 class="">Deadline <br> <span>21 March 2025</span></h4>
+                            <button class="btn btn-primary">Completed</button>
+                        </div>
+                     </div>
+                    
+                     
+                 </div>
+             </div>
 
         </div>
         <!-- Activity Log Area -->
-        <div class="w-3/12 bg-white">
-
+        <div class="bg-white w-3/12 rounded-lg">
+            <div class="flex flex-col gap-5 items-center py-5 border-b border-dashed border-gray-600">
+                <div class="flex gap-2">
+                    <img src="./assets/activity.png" alt="">
+                    <h3>Activity Log</h3>
+                </div>
+                <button class="btn btn-primary">Clear History</button>
+            </div>
 
         </div>
     </main>
-    
 
 
+<script src="./JS/script.js"></script>
 </body>
 
 </html>
