@@ -39,7 +39,7 @@ function takeTime() {
     return currentTime;
 }
 
-function taskAssigned() {
+function taskCounter(){
     const combtn = document.getElementsByClassName("com-btn");
     let numberOfBtn = 0;
     for (const item of combtn) {
@@ -47,6 +47,11 @@ function taskAssigned() {
             numberOfBtn++;
         }
     }
-    const pending = document.getElementById("pending-task");
-    pending.innerText = numberOfBtn;
+    return numberOfBtn;
 }
+
+function taskAssigned() {
+    const pending = document.getElementById("pending-task");
+    pending.innerText = taskCounter();
+}
+
