@@ -55,3 +55,10 @@ function taskAssigned() {
     pending.innerText = taskCounter();
 }
 
+function clearHistory(ID , clearID){
+    document.getElementById(ID).addEventListener("click" , 
+        function (){
+        document.getElementById(clearID).innerHTML ="";
+    });
+}
+

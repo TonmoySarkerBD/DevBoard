@@ -37,4 +37,8 @@ document.addEventListener("click",
         }
 
 
-    })
+});
+
+
+// History Clear 
+clearHistory("clear-history" ,"activityLog");
