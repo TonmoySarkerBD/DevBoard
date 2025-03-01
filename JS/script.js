@@ -1,2 +1,9 @@
 theme('theme-button');
-todayDate();
+
+takeDate();
+
+console.log(takeTime());
+
+
+// Complete tasks Work
+taskAssigned();

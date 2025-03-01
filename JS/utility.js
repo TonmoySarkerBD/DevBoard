@@ -14,15 +14,39 @@ function theme(themeID) {
 }
 
 
-function todayDate() {
-    const format = { 
+function takeDate() {
+    const format = {
         weekday: 'short',
         month: 'short',
         day: '2-digit',
         year: 'numeric'
     };
-    
+
     const today = new Date();
     const formattedDate = today.toLocaleDateString('en-BD', format);
     document.getElementById('date').textContent = formattedDate;
+}
+
+
+function takeTime() {
+    const now = new Date();
+    let hours = now.getHours();
+    const minutes = now.getMinutes().toString().padStart(2, "0");
+    const seconds = now.getSeconds().toString().padStart(2, "0");
+    const daynight = hours >= 12 ? "PM" : "AM";
+    hours = hours % 12 || 12;
+    const currentTime = `${hours}:${minutes}:${seconds} ${daynight}`;
+    return currentTime;
+}
+
+function taskAssigned() {
+    const combtn = document.getElementsByClassName("com-btn");
+    let numberOfBtn = 0;
+    for (const item of combtn) {
+        if (!item.hasAttribute("disabled")) {
+            numberOfBtn++;
+        }
+    }
+    const pending = document.getElementById("pending-task");
+    pending.innerText = numberOfBtn;
 }
